@@ -1,7 +1,9 @@
-[
-    {"timestamp":"2025-11-04T10:00:00Z","assets":[{"asset_id":"SOLAR-FARM-01","output_kw":100,"degradation_pct":0.5},{"asset_id":"SOLAR-FARM-02","output_kw":150,"degradation_pct":1.2},{"asset_id":"SOLAR-FARM-03","output_kw":120,"degradation_pct":5.8},{"asset_id":"SOLAR-FARM-04","output_kw":90,"degradation_pct":0.8},{"asset_id":"SOLAR-FARM-05","output_kw":200,"degradation_pct":2.5}]},
-    {"timestamp":"2025-11-04T11:00:00Z","assets":[{"asset_id":"SOLAR-FARM-01","output_kw":105,"degradation_pct":0.6},{"asset_id":"SOLAR-FARM-02","output_kw":155,"degradation_pct":1.4},{"asset_id":"SOLAR-FARM-03","output_kw":118,"degradation_pct":6.1},{"asset_id":"SOLAR-FARM-04","output_kw":92,"degradation_pct":0.9},{"asset_id":"SOLAR-FARM-05","output_kw":195,"degradation_pct":2.8}]},
-    {"timestamp":"2025-11-04T12:00:00Z","assets":[{"asset_id":"SOLAR-FARM-01","output_kw":110,"degradation_pct":0.7},{"asset_id":"SOLAR-FARM-02","output_kw":160,"degradation_pct":1.6},{"asset_id":"SOLAR-FARM-03","output_kw":115,"degradation_pct":6.5},{"asset_id":"SOLAR-FARM-04","output_kw":95,"degradation_pct":1.0},{"asset_id":"SOLAR-FARM-05","output_kw":190,"degradation_pct":3.1}]},
-    {"timestamp":"2025-11-04T13:00:00Z","assets":[{"asset_id":"SOLAR-FARM-01","output_kw":108,"degradation_pct":0.8},{"asset_id":"SOLAR-FARM-02","output_kw":158,"degradation_pct":1.8},{"asset_id":"SOLAR-FARM-03","output_kw":112,"degradation_pct":7.0},{"asset_id":"SOLAR-FARM-04","output_kw":93,"degradation_pct":1.2},{"asset_id":"SOLAR-FARM-05","output_kw":185,"degradation_pct":3.5}]}
-  ]
-  
+{
+  "timestamp": "2025-11-04T13:00:00Z",
+  "asset_id": "SOLAR-FARM-001",
+  "output_mwh": 92.5,
+  "irradiance_w_m2": 930,
+  "performance_degradation": 7.8  
+}
+
+
