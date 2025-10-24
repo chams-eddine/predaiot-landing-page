@@ -1,41 +1,27 @@
 # main.py
-# Main simulation script for the PREDAIOT EDE v1.0 Demo
 
-import json
-from engine import analyze_asset
+# نستورد فقط الدوال التي نحتاجها من ملف المحرك
+from engine import load_data, run_simulation
 
-def run_simulation(data_filepath='data.json'):
+def main():
     """
-    يقوم بتحميل البيانات وتشغيل المحاكاة الكاملة.
+    نقطة الدخول الرئيسية للتطبيق.
+    هذه هي الدالة التي تبدأ كل شيء.
     """
-    print("="*80)
-    print("[*] Starting PREDAIOT Economic Decision Engine Simulation...")
     
-    with open(data_filepath, 'r') as f:
-        data = json.load(f)
+    # الخطوة 1: تحميل بيانات المحاكاة من ملف data.json
+    # نستخدم الدالة load_data التي استوردناها من engine.py
+    simulation_data = load_data('data.json')
     
-    print(f"[*] Loaded {len(data)} data entries from '{data_filepath}'.")
-    print("="*80)
-    
-    for entry in data:
-        timestamp = entry['timestamp']
-        print(f"\n--- Analyzing Timestamp: {timestamp} ---")
-        
-        has_actionable_insight = False
-        for asset in entry['assets']:
-            result = analyze_asset(asset)
-            
-            if result['decision'] == "DISPATCH_MAINTENANCE":
-                print(f"  [!] DECISION for {result['asset_id']}: {result['decision']}")
-                print(f"      └── REASON: {result['reason']}")
-                has_actionable_insight = True
+    # الخطوة 2: تشغيل المحرك لاتخاذ القرارات
+    # نتأكد أولاً من أن البيانات تم تحميلها بنجاح لتجنب الأخطاء
+    if simulation_data:
+        # إذا كانت البيانات موجودة، نستدعي الدالة run_simulation
+        # التي استوردناها من engine.py ونمرر لها البيانات
+        run_simulation(simulation_data)
 
-        if not has_actionable_insight:
-            print("  [+] All assets operating within profitable parameters. No action required.")
-
-    print("\n" + "="*80)
-    print("[*] Simulation Complete.")
-    print("="*80)
-
+# هذا السطر القياسي في بايثون يضمن أن دالة main() هي التي تعمل
+# عند تشغيل الملف مباشرة من الطرفية (python3 main.py)
 if __name__ == "__main__":
-    run_simulation()
+    main()
+
