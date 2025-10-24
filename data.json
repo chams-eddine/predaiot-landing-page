@@ -1,9 +1,30 @@
-{
-  "timestamp": "2025-11-04T13:00:00Z",
-  "asset_id": "SOLAR-FARM-001",
-  "output_mwh": 92.5,
-  "irradiance_w_m2": 930,
-  "performance_degradation": 9.8  
-}
-
-
+[
+  {
+      "timestamp": "2025-11-04T10:00:00Z",
+      "asset_id": "SOLAR-FARM-001",
+      "output_mwh": 98.5,
+      "irradiance_w_m2": 990,
+      "performance_degradation": 1.5
+  },
+  {
+      "timestamp": "2025-11-04T11:00:00Z",
+      "asset_id": "SOLAR-FARM-001",
+      "output_mwh": 97.0,
+      "irradiance_w_m2": 980,
+      "performance_degradation": 3.0
+  },
+  {
+      "timestamp": "2025-11-04T12:00:00Z",
+      "asset_id": "SOLAR-FARM-001",
+      "output_mwh": 95.0,
+      "irradiance_w_m2": 960,
+      "performance_degradation": 4.2
+  },
+  {
+      "timestamp": "2025-11-04T13:00:00Z",
+      "asset_id": "SOLAR-FARM-001",
+      "output_mwh": 92.5,
+      "irradiance_w_m2": 930,
+      "performance_degradation": 7.8
+  }
+]
