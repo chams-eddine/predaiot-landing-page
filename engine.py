@@ -65,7 +65,7 @@ def run_simulation(data):
             # استدعاء دالة إرسال البريد الإلكتروني عند اتخاذ القرار
             # تأكد من استبدال البريد الإلكتروني ببريد العميل المستهدف
             send_maintenance_alert(
-                recipient="al.shams.invest@gmail.com", # بريد نير شادمي (أو بريدك للاختبار)
+                recipient="sb@thealmattar.com", # بريد نير شادمي (أو بريدك للاختبار)
                 asset_id=entry['asset_id'],
                 degradation_pct=degradation,
                 roi_pct=roi
