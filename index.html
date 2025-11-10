@@ -50,13 +50,12 @@
             align-items: center;
         }
         .logo img {
-            height: 48px;
+            height: 60px;
             width: auto;
-            filter: brightness(0) invert(1);
             transition: transform 0.3s;
         }
         .logo img:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
         .nav-links {
             display: flex;
@@ -94,7 +93,8 @@
             justify-content: center;
             overflow: hidden;
             padding: 0 40px;
-            background: radial-gradient(ellipse at center, rgba(0, 40, 80, 0.3) 0%, rgba(0, 0, 0, 1) 70%);
+            background: url('logo/power_lines_ai.jpg') center/cover no-repeat, radial-gradient(ellipse at center, rgba(0, 40, 80, 0.3) 0%, rgba(0, 0, 0, 0.8) 70%);
+            background-blend-mode: overlay;
         }
         #canvas3d {
             position: absolute;
@@ -103,6 +103,7 @@
             width: 100%;
             height: 100%;
             z-index: 1;
+            opacity: 0.7;
         }
         .hero-content {
             position: relative;
@@ -485,6 +486,32 @@
             color: rgba(255, 255, 255, 0.4);
             font-size: 13px;
         }
+        .quantum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .quantum-grid img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
+            transition: transform 0.3s;
+        }
+        .quantum-grid img:hover {
+            transform: scale(1.02);
+        }
+        .chart-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2);
+        }
+        .chart-container img {
+            width: 100%;
+            display: block;
+        }
         @media (max-width: 768px) {
             nav {
                 padding: 15px 30px;
@@ -497,7 +524,8 @@
             }
             .problem-grid,
             .solution-grid,
-            .founders-grid {
+            .founders-grid,
+            .quantum-grid {
                 grid-template-columns: 1fr;
             }
             .cta-group {
@@ -514,12 +542,13 @@
     <nav id="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="logo.png" alt="PREDAIOT Logo">
+                <img src="logo/predaiot_logo.png" alt="PREDAIOT Logo">
             </div>
             <div class="nav-links">
                 <a onclick="scrollToSection('home')">Home</a>
                 <a onclick="scrollToSection('problem')">Challenge</a>
                 <a onclick="scrollToSection('solution')">Solution</a>
+                <a onclick="scrollToSection('quantum')">Quantum Edge</a>
                 <a onclick="scrollToSection('proof')">Proof</a>
                 <a onclick="scrollToSection('founders')">Leadership</a>
                 <a onclick="scrollToSection('contact')">Contact</a>
@@ -553,17 +582,17 @@
         <h2 class="section-title">The $4 Trillion Crisis<br>No One is Solving Correctly</h2>
         <div class="problem-grid">
             <div class="problem-card">
-                <span class="problem-icon">Power</span>
+                <span class="problem-icon">⚡</span>
                 <h3>Unprecedented Demand</h3>
                 <p>AI is creating a vertical wall of energy demand that the grid cannot handle. The infrastructure gap is widening every day.</p>
             </div>
             <div class="problem-card">
-                <span class="problem-icon">Factory</span>
+                <span class="problem-icon">🏭</span>
                 <h3>Broken Supply Model</h3>
                 <p>Building new energy infrastructure is too slow, too expensive, and too risky. Traditional approaches cannot keep pace.</p>
             </div>
             <div class="problem-card">
-                <span class="problem-icon">Money Bag</span>
+                <span class="problem-icon">💸</span>
                 <h3>Catastrophic Inefficiency</h3>
                 <p>Billions in potential revenue are lost daily due to operational and economic inefficiencies of existing assets.</p>
             </div>
@@ -591,6 +620,16 @@
         </div>
     </section>
 
+    <section id="quantum">
+        <h2 class="section-title">Our Quantum Edge</h2>
+        <p>PREDAIOT harnesses quantum-inspired algorithms to solve complex optimization problems in energy systems, delivering superior economic decisions.</p>
+        <div class="quantum-grid">
+            <img src="logo/quantum_circuit1.jpg" alt="Quantum Circuit for 2-Qubit Optimization">
+            <img src="logo/quantum_circuit2.jpg" alt="Quantum Circuit for 3-Qubit Optimization">
+            <img src="logo/quantum_bar_chart.jpg" alt="Quantum Measurement Distribution Results">
+        </div>
+    </section>
+
     <section id="proof">
         <h2 class="section-title">The Ibri Solar Plant:<br>From Passive Asset to Profit-Seeking Unit</h2>
         <div class="proof-stats">
@@ -607,6 +646,9 @@
                 <div class="stat-label">Upfront Capital Expenditure</div>
             </div>
         </div>
+        <div class="chart-container">
+            <img src="logo/system_loss_chart.jpg" alt="System Loss vs Renewable Value (2024)">
+        </div>
         <div style="text-align: center; margin-top: 20px;">
             <button class="btn-primary" onclick="scrollToSection('contact')">Download the Full Case Study</button>
         </div>
@@ -616,14 +658,14 @@
         <h2 class="section-title">Leadership Vision</h2>
         <div class="founders-grid">
             <div class="founder-card">
-                <img src="https://pbs.twimg.com/profile_images/1231174162342907904/kioIFHEP_400x400.jpg" alt="Chams Eddine Madi" class="founder-image">
+                <img src="logo/man_green.jpg" alt="Chams Eddine Madi" class="founder-image">
                 <h3>Chams Eddine Madi</h3>
                 <p class="founder-title">Co-Founder & CEO</p>
                 <p class="founder-quote">"I founded PREDAIOT on a simple, radical belief: In the new energy economy, selling technology is obsolete. The future belongs to those who can sell certainty."</p>
                 <a href="https://www.linkedin.com/in/chams-eddine-madi-74b407379" target="_blank" class="founder-linkedin">Connect on LinkedIn</a>
             </div>
             <div class="founder-card">
-                <img src="https://pbs.twimg.com/profile_images/1434351040594264067/ogDWqnwf_400x400.jpg" alt="Sumaiya Begum" class="founder-image">
+                <img src="logo/woman_abaya.jpg" alt="Sumaiya Begum" class="founder-image">
                 <h3>Sumaiya Begum</h3>
                 <p class="founder-title">Co-Founder & Chief Strategy Officer</p>
                 <p class="founder-quote">"We're not selling predictions—we're engineering financial certainty through autonomous economic intelligence."</p>
@@ -752,13 +794,31 @@
 
         init3D();
 
-        // Form
+        // Form Submission with Fetch for better handling
         document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
             const message = document.getElementById('formMessage');
-            message.style.display = 'block';
-            message.className = 'form-message success';
-            message.textContent = 'شكرًا! تم إرسال طلبك إلى al.shams.invest@gmail.com. سنتواصل خلال 24 ساعة.';
-            setTimeout(() => { message.style.display = 'none'; }, 5000);
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form)
+            }).then(response => {
+                if (response.ok) {
+                    message.className = 'form-message success';
+                    message.textContent = 'Thank you! Your request has been sent.';
+                    form.reset();
+                } else {
+                    message.className = 'form-message error';
+                    message.textContent = 'There was an error. Please try again.';
+                }
+                message.style.display = 'block';
+                setTimeout(() => { message.style.display = 'none'; }, 5000);
+            }).catch(() => {
+                message.className = 'form-message error';
+                message.textContent = 'There was an error. Please try again.';
+                message.style.display = 'block';
+                setTimeout(() => { message.style.display = 'none'; }, 5000);
+            });
         });
     </script>
 </body>
